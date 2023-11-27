@@ -1,0 +1,8 @@
+numpy
+gunicorn
+streamlit
+streamlit-lottie
+tensorflow
+language_tool_python
+pickle
+json
