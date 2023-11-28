@@ -31,7 +31,7 @@ def generate_text_with_temperature(topic, next_words, temperature=1.0):
         #seq_length = 30  #Limiting sequence length to 30 words
         token_list = tf.keras.preprocessing.sequence.pad_sequences([token_list], maxlen=30, padding='pre')
 
-        predicted = model.predict(token_list, verbose=0)[-1]  # Last prediction
+        predicted = model.predict(token_list, verbose=0)[-1]  #Last prediction
         predicted = np.log(predicted) / temperature
         exp_preds = np.exp(predicted)
         predicted = exp_preds / np.sum(exp_preds)
